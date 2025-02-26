@@ -1,0 +1,57 @@
+Test Images for Image Enhancement System
+==========================================
+
+Filename: lena.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.01.tiff
+Description: Standard test image (Lena) - Good for general testing
+
+Filename: mandrill.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.02.tiff
+Description: Mandrill/Baboon - High frequency details, good for edge detection and sharpening
+
+Filename: peppers.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.03.tiff
+Description: Peppers - Good for color processing and contrast adjustment
+
+Filename: house.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.05.tiff
+Description: House - Good for edge detection and structural details
+
+Filename: jellybeans.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.06.tiff
+Description: Jelly Beans - Good for color processing and pseudocolor tests
+
+Filename: airplane.tiff
+Source: https://sipi.usc.edu/database/misc/4.1.07.tiff
+Description: Airplane - Good for edge detection and noise reduction
+
+Filename: resolution_chart.tiff
+Source: https://sipi.usc.edu/database/misc/4.2.03.tiff
+Description: Resolution Chart - Good for interpolation and magnification testing
+
+Filename: moon.tiff
+Source: https://sipi.usc.edu/database/misc/5.1.09.tiff
+Description: Moon Surface - Good for grayscale processing and pseudocolor
+
+Filename: aerial.tiff
+Source: https://sipi.usc.edu/database/misc/5.1.10.tiff
+Description: Aerial - Good for grayscale processing and edge enhancement
+
+Filename: mri.tiff
+Source: https://sipi.usc.edu/database/misc/7.1.01.tiff
+Description: MRI - Good for pseudocolor processing and medical image enhancement
+
+Filename: xray.tiff
+Source: https://sipi.usc.edu/database/misc/7.1.03.tiff
+Description: X-ray - Good for pseudocolor processing and contrast enhancement
+
+Filename: butterfly.jpg
+Source: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/BSDS300/images/test/101087.jpg
+Description: Butterfly - Good for detail enhancement and color processing
+
+Filename: surfer.jpg
+Source: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/BSDS300/images/test/108082.jpg
+Description: Surfer - Good for contrast adjustment and edge detection
+
+
+Summary: Downloaded 13 of 18 images.
