@@ -1,0 +1,18 @@
+# STL Processing
+numpy-stl>=3.0.0
+trimesh>=3.9.0
+
+# Visualization
+pyvista>=0.34.0
+vedo>=2022.0.0
+
+# Geometric Analysis
+scipy>=1.7.0
+networkx>=2.6.0
+
+# Database
+mysql-connector-python>=8.0.0
+sqlalchemy>=1.4.0
+
+# Testing
+pytest>=6.0.0
