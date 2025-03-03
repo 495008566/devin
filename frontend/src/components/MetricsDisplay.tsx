@@ -1,4 +1,4 @@
-import React from 'react';
+import { } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Separator } from './ui/separator';
 import { 
@@ -72,17 +72,17 @@ export function MetricsDisplay({ metrics, title = 'Enhancement Metrics' }: Metri
                   <XAxis 
                     dataKey="name" 
                     tick={{ fontSize: 12 }}
-                    tickFormatter={(value) => value.replace(/_/g, ' ')}
+                    tickFormatter={(value) => typeof value === 'string' ? value.replace(/_/g, ' ') : value}
                   />
                   <YAxis hide />
                   <Tooltip 
                     formatter={(value, name) => {
                       const item = chartData.find(d => d.name === name);
-                      return [item?.label || value, name.replace(/_/g, ' ')];
+                      return [item?.label || value, typeof name === 'string' ? name.replace(/_/g, ' ') : name];
                     }}
                   />
                   <Bar dataKey="value" fill="#8884d8">
-                    {chartData.map((entry, index) => (
+                    {chartData.map((_, index) => (
                       <Cell key={`cell-${index}`} fill={`hsl(${index * 45}, 70%, 60%)`} />
                     ))}
                   </Bar>
