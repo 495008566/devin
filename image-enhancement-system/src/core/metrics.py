@@ -34,7 +34,7 @@ def calculate_mse(original: np.ndarray, processed: np.ndarray) -> float:
     if original_gray.shape != processed_gray.shape:
         processed_gray = cv2.resize(processed_gray, (original_gray.shape[1], original_gray.shape[0]))
     
-    return np.mean((original_gray.astype(np.float32) - processed_gray.astype(np.float32)) ** 2)
+    return float(np.mean((original_gray.astype(np.float32) - processed_gray.astype(np.float32)) ** 2))
 
 def calculate_psnr(original: np.ndarray, processed: np.ndarray) -> float:
     """
@@ -136,7 +136,7 @@ def calculate_entropy(image: np.ndarray) -> float:
     hist = hist / np.sum(hist)  # Normalize
     
     # Calculate entropy
-    return entropy(hist[hist > 0])
+    return float(entropy(hist[hist > 0]))
 
 def calculate_contrast(image: np.ndarray) -> float:
     """
@@ -154,7 +154,7 @@ def calculate_contrast(image: np.ndarray) -> float:
     else:
         gray = image
     
-    return np.std(gray.astype(np.float32))
+    return float(np.std(gray.astype(np.float32)))
 
 def get_image_metrics(original: np.ndarray, processed: np.ndarray) -> Dict[str, float]:
     """
