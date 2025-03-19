@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h1>About Flask MySQL App</h1>
+            <p class="lead">A simple web application with user authentication and CRUD operations.</p>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Features</h5>
+                    <ul>
+                        <li>User registration and login functionality</li>
+                        <li>Create, read, update, and delete records in the database</li>
+                        <li>Simple web interface for interacting with the application</li>
+                        <li>Proper error handling and input validation</li>
+                        <li>Security features like password hashing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Technologies Used</h5>
+                    <ul>
+                        <li>Flask - Web framework</li>
+                        <li>SQLAlchemy - ORM for database interactions</li>
+                        <li>MySQL - Database</li>
+                        <li>Flask-Login - User authentication</li>
+                        <li>Flask-WTF - Form handling and validation</li>
+                        <li>Bootstrap - Frontend styling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

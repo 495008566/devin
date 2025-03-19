@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Welcome to Flask MySQL App</h1>
+            <p class="lead">A simple web application with user authentication and CRUD operations.</p>
+            
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('main.new_item') }}" class="btn btn-primary mb-4">Create New Item</a>
+            {% else %}
+                <p>Please <a href="{{ url_for('auth.login') }}">login</a> or <a href="{{ url_for('auth.register') }}">register</a> to create items.</p>
+            {% endif %}
+            
+            <h2>Recent Items</h2>
+            
+            {% if items %}
+                {% for item in items %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">By {{ item.author.username }} on {{ item.created_at.strftime('%Y-%m-%d') }}</h6>
+                            <p class="card-text">{{ item.description|truncate(100) }}</p>
+                            <a href="{{ url_for('main.item', item_id=item.id) }}" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No items found.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
