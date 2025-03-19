@@ -6,13 +6,15 @@ Main entry point for the Image Enhancement System.
 import os
 import sys
 
-# Add the src directory to the path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add the parent directory to the path to make imports work
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
 
-from src.core import processor
-from src.ui import interface
-from src.database import db_manager
-from src.utils import helpers
+# Import modules directly
+from core import processor
+from ui import interface
+from database import db_manager
+from utils import helpers
 
 def main():
     """Main function to run the Image Enhancement System."""
